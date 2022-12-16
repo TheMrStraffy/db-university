@@ -1,0 +1,54 @@
+1. SELECT *
+FROM `students`
+WHERE YEAR(`date_of_birth`) = 1990
+ORDER BY `date_of_birth`ASC;
+
+ (160)
+
+2.SELECT *
+ FROM `courses` 
+WHERE `cfu` > 10 
+ORDER BY `cfu` ASC;
+
+ (479)
+
+3. SELECT *, FLOOR(DATEDIFF(NOW(),`date_of_birth`) / 365.25)  AS `age` 
+FROM `students` WHERE FLOOR(DATEDIFF(NOW(),`date_of_birth`) / 365.25) > 30 
+ORDER BY FLOOR(DATEDIFF(NOW(),`date_of_birth`) / 365.25)  ASC; 
+
+ (3328)
+
+--ho provato a non ripetere la funzione ma `age` me lo segnava come inesistente
+
+4. SELECT * 
+FROM `courses` 
+WHERE `period` = 'I semestre' AND `year` = 1 
+ORDER BY `cfu` ASC;
+
+ (286)
+
+5. SELECT * 
+FROM `exams` 
+WHERE `hour` > '14:00:00' AND `date` = '2020-06-20' 
+ORDER BY `hour` ASC;
+
+ (21)
+
+6. SELECT *
+FROM `degrees`
+WHERE `level` = 'magistrale'
+ORDER BY `id` ASC;
+
+ (38)
+
+7. SELECT COUNT(*) AS `number_of_departments`
+FROM `departments`;
+
+ (12)
+
+8. SELECT * 
+FROM `teachers` 
+WHERE `phone` IS NULL
+ORDER BY `name` ASC;
+
+(50)
